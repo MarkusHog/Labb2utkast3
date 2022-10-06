@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Labb2utkast3
+namespace Labb2
 {
     public abstract class Shape3D : Shape
     {

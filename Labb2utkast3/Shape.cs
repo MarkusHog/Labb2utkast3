@@ -1,11 +1,10 @@
 ﻿using System.Numerics;
 
-namespace Labb2utkast3
+namespace Labb2
 {
     public abstract class Shape
     {
-        //private int randomShape;
-        //private Vector3 center;
+        
         public abstract Vector3 Center { get; }
         public abstract float Area { get; }
 
@@ -16,9 +15,7 @@ namespace Labb2utkast3
             float y = Random.Shared.Next(-100, 100);
             float z = Random.Shared.Next(-100, 100);
 
-
             Vector3 _center = new Vector3(x, y, z);
-            
             Vector2 center = new Vector2(x,y);
 
             float x1 = Random.Shared.Next(1, 100);
@@ -28,10 +25,22 @@ namespace Labb2utkast3
             Vector2 size = new Vector2(x1, y1);
             Vector3 _size = new Vector3(x1, y1, z1);
 
-            float width = x1;
+            float x2 = Random.Shared.Next(-100, 100);
+            float y2 = Random.Shared.Next(-100, 100);
+
+            float x3 = Random.Shared.Next(-100, 100);
+            float y3 = Random.Shared.Next(-100, 100);
+
+
+
+            Vector2 p1 = new Vector2(x2, y2);
+            Vector2 p2 = new Vector2(z, z1);
+            Vector2 p3 = new Vector2(x3, y3);
+
+            float width = Random.Shared.Next(0,100);
             float radius = Random.Shared.Next(0, 50);
 
-            int randomShape = Random.Shared.Next(0, 6);
+            int randomShape = Random.Shared.Next(0, 7);
 
 
             if(randomShape == 0)
@@ -61,21 +70,21 @@ namespace Labb2utkast3
                 Cuboid cube = new Cuboid(_center, width);
                 return cube;
             }
-            else
+            if(randomShape == 5)
             {
                 Sphere sphere = new Sphere(_center, radius);
                 return sphere;
             
             }
+            else
+            {
+                
+                Triangle triangle = new Triangle(p1, p2, p3);
+                return triangle;
+            }
            
-           
-            
-
-
         }
-      
-      
-    }
 
-        
+    }
+   
 }

@@ -5,7 +5,7 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Labb2utkast3
+namespace Labb2
 {
     public class Sphere : Shape3D
     {
@@ -13,7 +13,6 @@ namespace Labb2utkast3
         private Vector3 _center;
         private float radius;
         private float _area;
-       
 
         public override float Volume => _volume;
 
@@ -26,7 +25,7 @@ namespace Labb2utkast3
             this._center = center;
             this.radius = radius;
             this._area = (float)(Math.PI * 4 * radius * radius);
-            this._volume = (float)(Math.PI * Math.Pow(radius, 3)*4/3);
+            this._volume = (float)(Math.PI * Math.Pow(radius, 3) * 4/3);
         }
         public override string ToString() => $"sphere @{_center:f2}: r = {radius:f2} " ;
     }

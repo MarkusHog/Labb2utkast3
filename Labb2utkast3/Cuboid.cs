@@ -5,7 +5,7 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Labb2utkast3
+namespace Labb2
 {
     public class Cuboid : Shape3D
     {
