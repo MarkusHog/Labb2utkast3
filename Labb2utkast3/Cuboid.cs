@@ -42,10 +42,10 @@ namespace Labb2utkast3
         {
             if (!IsCube)
             {
-                return $"cuboid @{_center} w = {_size.X}, h = {_size.Y} l = {_size.Z} area = {_area} volume = {_volume}";
+                return $"cuboid @{_center}, w = {_size.X}, h = {_size.Y} l = {_size.Z} ";
 
             }
-            return $"cube @{_center}, w, h and l = {width}, area = {_area} volume = {_volume}";
+            return $"cube @{_center}, w, h and l = {width} ";
 
             
         }

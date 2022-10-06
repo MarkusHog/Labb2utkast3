@@ -16,10 +16,10 @@ namespace Labb2utkast3
         private float circumference;
         
 
-
         public override float Area => _area;
+        public float Circumference => circumference;
 
-        public Vector3 Center { get; }
+        public Vector2 Center => center;
         public bool IsSquare
         {
             get
@@ -29,7 +29,6 @@ namespace Labb2utkast3
             }
             
         }
-
 
 
         public Rectangle(Vector2 center, Vector2 size)
@@ -53,12 +52,12 @@ namespace Labb2utkast3
         {
             if (IsSquare)
             {
-                return $"Sqare @{center} width and heigth = {size.X} area = {_area} circumference = {circumference}";
+                return $"Sqare @{center}: width and heigth = {size.X} ";
 
             }
             else
             {
-                return $"rectangle @{center}: w = {size.X} h = {size.Y} area = {_area} circumference = {circumference}";
+                return $"rectangle @{center}: w = {size.X}, h = {size.Y} ";
 
             }
 
