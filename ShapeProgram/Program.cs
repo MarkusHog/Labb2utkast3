@@ -12,9 +12,9 @@ for (int i = 0; i < 20; i++)
     sum += shapeArray[i].Area;
 
 }
-Console.WriteLine(sum);
+Console.WriteLine($"Total area {sum:f2}");
 float averageArea = sum / 20;
-Console.WriteLine($"Average area is {averageArea}");
+Console.WriteLine($"Average area is {averageArea:f2}");
 
 
 
@@ -28,5 +28,6 @@ Vector2 ab = new Vector2(4, 8);
 
 Circle myCircle = new Circle(ab,2);
 Console.WriteLine(myCircle.Circumference);
+
 
 

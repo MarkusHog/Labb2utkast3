@@ -14,7 +14,7 @@ namespace Labb2utkast3
         private float width;
         private Vector3 _size;
         private float _area;
-        private bool isCube;
+        //private bool isCube;
         public override float Volume => _volume;
 
         public override Vector3 Center => _center;
@@ -36,8 +36,6 @@ namespace Labb2utkast3
             this._area = width * width * 6;
             this._volume = (float)Math.Pow(width,3);
         }
-
-
 
         public override string ToString()
         {

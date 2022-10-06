@@ -29,6 +29,6 @@ namespace Labb2utkast3
             //this.circumference = Math.PI * radius * 2;
             this._volume = (float)(Math.PI * Math.Pow(radius, 3)*4/3);
         }
-        public override string ToString() => $"sphere @{_center}: r = {radius} area = {_area}" ;
+        public override string ToString() => $"sphere @{_center:f2}: r = {radius:f2} area = {_area:f2} volume = {_volume:f2}" ;
     }
 }

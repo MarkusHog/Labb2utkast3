@@ -32,7 +32,7 @@ public class Circle : Shape2D
     }
     public override string ToString()
     {
-        return $"circle @{center}: r = {radius} area = {_area} circumference = {circumference}";
+        return $"circle @{center}: r = {radius} area = {_area:f2} circumference = {circumference:f2}";
 
     }
     

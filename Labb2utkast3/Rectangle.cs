@@ -9,16 +9,13 @@ namespace Labb2utkast3
 {
     public class Rectangle : Shape2D
     {
-        private object y;
-        private object x;
-        private float x1;
-        private float y1;
+
         private Vector2 center;
         private Vector2 size;
         private float _area;
         private float circumference;
-        private object width;
-        //private bool square;
+        
+
 
         public override float Area => _area;
 
@@ -27,33 +24,20 @@ namespace Labb2utkast3
         {
             get
             {
-
                 return size.X == size.Y;
-                //if (size.X == size.Y)
-                //{
-                //    return true;
-                    
-                //}
-                //else
-                //{
-                //    return false;
-                //}
+                
             }
-
             
         }
 
 
 
         public Rectangle(Vector2 center, Vector2 size)
-        {
-            
+        {            
             this.center = center;
             this.size = size;
             this._area = size.X * size.Y;
-            this.circumference = size.X+size.Y * 2;
-
-
+            this.circumference = size.X*2+size.Y * 2;
         }
         public Rectangle(Vector2 center, float width) 
         {
@@ -64,8 +48,7 @@ namespace Labb2utkast3
             this.circumference = width * 4;
             
         }
-        //public override string ToString() => $"rectangle @{center}: w = {size.X} h = {size.Y} area = {_area}";
-        //public override string ToString() => $"Sqare @{center} width and heigth = {size.X} area = {_area}";
+        
         public override string ToString()
         {
             if (IsSquare)
