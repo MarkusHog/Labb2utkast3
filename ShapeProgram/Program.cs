@@ -14,20 +14,21 @@ for (int i = 0; i < 20; i++)
 }
 Console.WriteLine($"Total area {sum:f2}");
 float averageArea = sum / 20;
-Console.WriteLine($"Average area is {averageArea:f2}");
+Console.WriteLine($"The average area is {averageArea:f2}");
 
 
+//Circle
+
+Circle abc = new Circle(new Vector2(3.0f, 4.0f),2);
+
+Console.WriteLine(abc.Area);
+Console.WriteLine(abc.Circumference);
 
 
-Vector3 abc = new Vector3(5, 8, 10);
-Sphere mySphere = new(abc, 20);
-Console.WriteLine(mySphere.Volume);
-Console.WriteLine(mySphere);
-
-Vector2 ab = new Vector2(4, 8);
-
-Circle myCircle = new Circle(ab,2);
-Console.WriteLine(myCircle.Circumference);
-
+Rectangle bcd = new Rectangle(new Vector2(3.0f, 4.0f), 2);
+Console.WriteLine(bcd.Circumference);
+Console.WriteLine(bcd.Area);
+Console.WriteLine(bcd.IsSquare);
+Console.WriteLine(bcd.Center);
 
 

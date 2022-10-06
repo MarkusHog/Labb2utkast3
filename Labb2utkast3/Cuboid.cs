@@ -14,13 +14,14 @@ namespace Labb2utkast3
         private float width;
         private Vector3 _size;
         private float _area;
-        //private bool isCube;
+       
         public override float Volume => _volume;
 
         public override Vector3 Center => _center;
 
         public override float Area => _area;
         public bool IsCube => _size.X == _size.Y && _size.Y == _size.Z;
+
         public Cuboid(Vector3 center, Vector3 size)
         {
             this._center = center;
@@ -41,10 +42,12 @@ namespace Labb2utkast3
         {
             if (!IsCube)
             {
-                return $"cuboid @{_center} w = {_size.X}, h = {_size.Y} l = {_size.Z} area = {_area}";
+                return $"cuboid @{_center} w = {_size.X}, h = {_size.Y} l = {_size.Z} area = {_area} volume = {_volume}";
 
             }
-            return $"cube @{_center}, w, h and l {width}, area = {_area}";
+            return $"cube @{_center}, w, h and l = {width}, area = {_area} volume = {_volume}";
+
+            
         }
     }
 }
