@@ -28,7 +28,7 @@ namespace Labb2
             this._size = size;
             this._area = (size.X * size.Y * 2) + (size.X * size.Z * 2) + (size.Z * size.Y * 2);
             this._volume = size.X * size.Y * size.Z;
-            
+            this.width = _size.X;        
         }
         public Cuboid(Vector3 center, float width)
         {
@@ -36,6 +36,9 @@ namespace Labb2
             this.width = width;
             this._area = width * width * 6;
             this._volume = (float)Math.Pow(width,3);
+            this._size.X = width;
+            this._size.Y = width;
+            this._size.Z = width;
         }
 
         public override string ToString()

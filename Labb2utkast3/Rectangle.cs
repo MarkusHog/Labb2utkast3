@@ -11,6 +11,7 @@ namespace Labb2
     {
 
         private Vector2 center;
+        private float width;
         private Vector2 size;
         private float _area;
         private float circumference;
@@ -31,6 +32,7 @@ namespace Labb2
         public Rectangle(Vector2 center, float width) 
         {
             this.center = center;
+            this.width = width;
             this.size.X = width;
             this.size.Y = width;
             this._area = width * width;
@@ -41,7 +43,7 @@ namespace Labb2
         {
             if (IsSquare)
             {
-                return $"Sqare @{center}: width and heigth = {size.X} ";
+                return $"Sqare @{center}: width and heigth = {width} ";
             }
             else
             {

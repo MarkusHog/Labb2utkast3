@@ -31,8 +31,6 @@ namespace Labb2
             float x3 = Random.Shared.Next(-100, 100);
             float y3 = Random.Shared.Next(-100, 100);
 
-
-
             Vector2 p1 = new Vector2(x2, y2);
             Vector2 p2 = new Vector2(z, z1);
             Vector2 p3 = new Vector2(x3, y3);
